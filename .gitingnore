@@ -1,0 +1,12 @@
+# Ignore compiled binaries and object files
+*.o
+sniffer
+
+# Ignore System and IDE files
+.DS_Store
+.vscode/
+.idea/
+
+# Ignore Python virtual environment (if created)
+venv/
+__pycache__/
