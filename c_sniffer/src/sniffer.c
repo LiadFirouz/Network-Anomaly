@@ -1,9 +1,9 @@
 #include "../include/sniffer.h"
 
 void packet_callback(u_char *user_args, const struct pcap_pkthdr *cap_header, const u_char *packet_body) {
-    static int packet_count = 1;
-    printf("[%d] Packet captured! | Captured Length: %d bytes | Total Length: %d bytes\n", 
-            packet_count++, cap_header->caplen, cap_header->len);
+    (void)user_args;
+    /*printf("[%d] Packet captured! | Captured Length: %d bytes | Total Length: %d bytes\n", 
+            packet_count++, cap_header->caplen, cap_header->len);*/
     parse_packet(packet_body, cap_header->len);
 }
 
